@@ -16,7 +16,7 @@ axios.get(url).then((res) => {
 
 
 app.get('/', (req, res) => {
-    res.send("<h1>Working Fine Now trying to attach api</h1>");
+    res.send(`<h1>Working Fine ${price}</h1>`);
 });
 
 app.route("/users").get((req, res, next) => {
