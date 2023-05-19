@@ -17,15 +17,23 @@ axios.get(url).then((res) => {
 
 
 app.get('/', (req, res) => {
-    res.send(`<h1> ${price}</h1>    
+    try {
+        res.send(`<h1> ${price}</h1>    
     `);
+    } catch (error) {
+        console.log(error)
+    }
 });
 
-app.route("/users").get((req, res, next) => {
-    res.status(200).json({
-        user: [],
-        success: false,
-    });
+app.route("/price").get((req, res) => {
+    try {
+        res.status(200).json({
+            user: [],
+            success: false,
+        });
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 //PORT
