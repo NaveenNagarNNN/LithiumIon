@@ -1,7 +1,7 @@
 import { app } from "./app.js";
 
 app.get('/', (req, res) => {
-    res.send("<h1>Working Fine</h1>");
+    res.send("<h1>Working Fine Now trying to attach api</h1>");
 });
 
 app.route("/users").get((req, res, next) => {
@@ -12,7 +12,7 @@ app.route("/users").get((req, res, next) => {
 });
 
 //PORT
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 //run listen
 app.listen(PORT, () => {
