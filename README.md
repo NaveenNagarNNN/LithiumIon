@@ -10,7 +10,7 @@ Create a RestFul API that returns the price mentioned on this website
 - The API would be have endpoint `GET /price`
 - Every time the API is hit, this scrape [webpage](https://www.metal.com/Lithium-ion-Battery/202303240001), and give the latest price and range
 - The API return error message, for invalid calls
-- Hosted on
+- Hosted on render(https://lithiumion.onrender.com/)
 
 How to run the program.
 Simply clone this repository on your local system and execute as npm start.
