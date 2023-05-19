@@ -1,4 +1,19 @@
 import { app } from "./app.js";
+import Cheerio from "cheerio";
+import axios from "axios";
+
+
+let price;
+const url = 'https://www.metal.com/Lithium-ion-Battery/202303240001';
+axios.get(url).then((res) => {
+    const $ = Cheerio.load(res.data);
+    price = $('.metalsContent___3T_m3 .block___2RfAT').text();
+    console.log(price);
+
+}).catch((error) => {
+    console.log(error);
+});
+
 
 app.get('/', (req, res) => {
     res.send("<h1>Working Fine Now trying to attach api</h1>");
