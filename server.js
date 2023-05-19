@@ -3,11 +3,12 @@ import Cheerio from "cheerio";
 import axios from "axios";
 
 
-let price;
+let price, pricerange;
 const url = 'https://www.metal.com/Lithium-ion-Battery/202303240001';
 axios.get(url).then((res) => {
     const $ = Cheerio.load(res.data);
-    price = $('.metalsContent___3T_m3 .block___2RfAT').text();
+    price = $('.metalsContent___3T_m3 .block___2RfAT  ').text();
+
     console.log(price);
 
 }).catch((error) => {
@@ -16,7 +17,9 @@ axios.get(url).then((res) => {
 
 
 app.get('/', (req, res) => {
-    res.send(`<h1>Working Fine ${price}</h1>`);
+    res.send(`<h1>Avg:. ${price}<br>
+    ${price} </h1>    
+    `);
 });
 
 app.route("/users").get((req, res, next) => {
