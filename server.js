@@ -17,8 +17,7 @@ axios.get(url).then((res) => {
 
 
 app.get('/', (req, res) => {
-    res.send(`<h1>Avg:. ${price}<br>
-    ${price} </h1>    
+    res.send(`<h1>Avg:. ${price}</h1>    
     `);
 });
 
